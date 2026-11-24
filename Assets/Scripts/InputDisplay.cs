@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -86,7 +84,7 @@ public class InputDisplay : MonoBehaviour
 
         var kb = Keyboard.current;
         float x0 = Screen.width - 5f * (Size + Gap) - 16f;
-        float y0 = Screen.height - 2f * (Size + Gap) - 70f;
+        float y0 = Screen.height - 2f * (Size + Gap) - 210f;
 
         GUI.color = new Color(0f, 0f, 0f, 0.55f);
         GUI.DrawTexture(new Rect(x0 - 8f, y0 - 8f, 5f * (Size + Gap) + 12f, 2f * (Size + Gap) + 62f), pixel);
@@ -104,8 +102,8 @@ public class InputDisplay : MonoBehaviour
 
         GUI.color = Color.white;
         float ty = y0 + 2f * (Size + Gap);
-        GUI.Label(new Rect(x0, ty, 5f * (Size + Gap), 22f), "recent: "+ string.Join("", recent), style);
-        GUI.Label(    new Rect(x0, ty + 22f, 5f * (Size + Gap), 22f),    "INPUT (float4)  presses: " + TotalPresses(),    style);
+        GUI.Label(new Rect(x0, ty, 5f * (Size + Gap), 22f), "recent: " + string.Join(" ", recent), style);
+        GUI.Label(new Rect(x0, ty + 22f, 5f * (Size + Gap), 22f), "INPUT (F4)  presses: " + TotalPresses(), style);
     }
 
     int TotalPresses()

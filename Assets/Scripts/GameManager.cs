@@ -80,7 +80,6 @@ public class GameManager : MonoBehaviour
         OpenMenu(0);
     }
 
-    // ------------------------------------------------------------ grid helpers
 
     public bool Occupied(int c, int r)
     {
@@ -105,7 +104,6 @@ public class GameManager : MonoBehaviour
         return best;
     }
 
-    // ------------------------------------------------------------ flow
 
     void OpenMenu(int state)
     {
@@ -325,7 +323,6 @@ public class GameManager : MonoBehaviour
         Bit.Burst(W(goal.x, goal.y), new[] { Gfx.Hex("ffd166"), Gfx.Hex("7ef0c8"), Color.white }, 36, 9f);
     }
 
-    // ------------------------------------------------------------ per-frame
 
     void Update()
     {
@@ -488,7 +485,6 @@ public class GameManager : MonoBehaviour
         shake = Mathf.Max(0f, shake - Time.unscaledDeltaTime * 1.3f);
     }
 
-    // ------------------------------------------------------------ menu logic
 
     float Scale => Screen.height / 480f;
     float VW => Screen.width / Scale;
@@ -558,7 +554,6 @@ public class GameManager : MonoBehaviour
         StartGame(i, menuTwo);
     }
 
-    // ------------------------------------------------------------ drawing (IMGUI)
 
     GUIStyle style;
 

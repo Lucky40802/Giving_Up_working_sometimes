@@ -72,7 +72,7 @@ public class ToastBanner : MonoBehaviour
         foreach (int m in Milestones)
         {
             if (sessionDeaths == m)
-                Push(m + "DEATHS - KEEP GOING");
+                Push(m + " DEATHS - KEEP GOING");
         }
     }
 
@@ -98,7 +98,7 @@ public class ToastBanner : MonoBehaviour
 
         float a = Alpha();
         float slide = (1f - a) * 20f;
-        var rect = new Rect(0f, Screen.height * 0.18f - slide, Screen.width, 60f);
+        var rect = new Rect(0f, Screen.height * 0.22f - slide, Screen.width, 60f);
 
         style.normal.textColor = new Color(0f, 0f, 0f, a * 0.7f);
         GUI.Label(new Rect(rect.x + 2f, rect.y + 2f, rect.width, rect.height), current.text, style);

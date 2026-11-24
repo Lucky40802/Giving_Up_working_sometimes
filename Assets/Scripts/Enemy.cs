@@ -1,6 +1,5 @@
 using UnityEngine;
 
-// Enemies live in grid space (x right, y DOWN, 1 unit = 1 tile) so they can ask GameManager.Occupied(col,row).
 public class Enemy : MonoBehaviour
 {
     const float R = 10f / 32f;

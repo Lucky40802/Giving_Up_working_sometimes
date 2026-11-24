@@ -37,6 +37,6 @@ public class BodyCounter : MonoBehaviour
         style.fontSize = Mathf.RoundToInt(Screen.height * (0.05f + 0.03f * flash));
         style.normal.textColor = tint;
 
-        GUI.Label(new Rect(0, Screen.height * 0.08f, Screen.width, Screen.height * 0.15f), lastCount + "bodies", style);
+        GUI.Label(new Rect(0, Screen.height * 0.38f, Screen.width, Screen.height * 0.15f), lastCount + " bodies", style);
     }
 }
