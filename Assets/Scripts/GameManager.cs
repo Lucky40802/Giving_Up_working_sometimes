@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class GameManager : MonoBehaviour
+public partial class GameManager : MonoBehaviour
 {
     public static GameManager I;
     const int COLS = Levels.COLS;
@@ -327,6 +327,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (Inp.Down(Key.M)) ToggleSound();
+        if (UndoTick()) return;
         toastT -= Time.unscaledDeltaTime;
         if (toastT <= 0f) toast = "";
 
@@ -620,6 +621,8 @@ public class GameManager : MonoBehaviour
             Box(new Rect(tr.x + 4, tr.y + 3, 2, 8), new Color(0.1f, 0.06f, 0.13f));
             Box(new Rect(tr.x + 2, tr.y + 5, 6, 2), new Color(0.1f, 0.06f, 0.13f));
         }
+
+        DrawUndo(vw);
 
         if (mode == Mode.Pause)
         {

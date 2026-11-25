@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Corpse : MonoBehaviour
+public partial class Corpse : MonoBehaviour
 {
     public string kind = "normal";
     public Vector2Int cell;
@@ -18,6 +18,8 @@ public class Corpse : MonoBehaviour
         c.cell = cell;
         c.kind = kind;
         c.drop = dropTiles;
+        c.shade = n;
+        c.facing = face;
         if (kind != "portal")
         {
             var bc = go.AddComponent<BoxCollider2D>();

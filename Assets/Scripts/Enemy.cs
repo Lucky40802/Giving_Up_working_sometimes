@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public partial class Enemy : MonoBehaviour
 {
     const float R = 10f / 32f;
     const float GRAVITY = 43.75f;

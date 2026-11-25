@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Omnitricks : MonoBehaviour
+public partial class Omnitricks : MonoBehaviour
 {
     class Trick
     {
@@ -134,7 +134,7 @@ public class Omnitricks : MonoBehaviour
         }
 
         if (kb.eKey.wasPressedThisFrame) Cycle(1);
-        if (kb.qKey.wasPressedThisFrame) Cycle(-1);
+        if (kb.zKey.wasPressedThisFrame) Cycle(-1);
         if (kb.hKey.wasPressedThisFrame) hidden = !hidden;
     }
 

@@ -88,7 +88,7 @@ public class DeathLog : MonoBehaviour
 
         float w = 300f;
         float h = 80f + lines.Count * 20f;
-        var box = new Rect(Screen.width - w - 12f, Screen.height * 0.2f, w, h);
+        var box = new Rect(Screen.width - w - 272f, Screen.height * 0.2f, w, h);
         GUI.Box(box, "");
 
         GUI.Label(new Rect(box.x + 10f, box.y + 6f, w - 20f, 22f), "DEATH LOG  (F2)", style);
